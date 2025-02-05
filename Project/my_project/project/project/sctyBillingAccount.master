@@ -1,0 +1,18 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Home.Master" AutoEventWireup="true" CodeBehind="sctyBillingAccount.master.cs" Inherits="project.sctyBillingAccount" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div class="container">
+        <div class="leftBar">
+            <ul>
+                <li><a href="f1.aspx">Owners Resident Directory</a></li>
+                <li><a href="cm.aspx">Commitee Members</a></li>
+                <li><a href="um.aspx">User Management</a></li>
+            </ul>
+        </div>
+        <div class="rightContainer">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </div>
+</asp:Content>

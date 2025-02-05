@@ -1,0 +1,120 @@
+using System.Text.RegularExpressions;
+ 
+ private void is_valid_username(string str_username)
+ {
+ Regex matchRegex = new Regex(@"^[a-zA-Z0-9_]{3,16}$");
+ MatchCollection matches  = matchRegex.Matches(str_username);
+ if(matches.Count==0)
+ {
+ Response.Write("Wrong username format."); // In Webserver
+ //MessageBox.Show("Wrong username format."); //In Windows Form
+ }
+ else
+ {
+ Response.Write("Username format is ok."); // In Webserver
+ //MessageBox.Show("Username format is ok."); //In Windows Form
+ }
+ }
+
+
+
+email
+
+using System.Text.RegularExpressions;
+ private void is_valid_email(string email_id)
+ {
+ Regex matchRegex = new Regex(@"[a-zA-Z0-9_\-\.]+@[a-zA-Z0-9_\-\.]+\.[a-zA-Z]{2,5}");
+ MatchCollection matches  = matchRegex.Matches(email_id);
+ if(matches.Count==0)
+ {
+ Response.Write("Wrong email address format."); // In Webserver
+ //MessageBox.Show("Wrong email address format."); //In Windows Form
+ }
+ else
+ {
+ Response.Write("Email address format is ok."); // In Webserver
+ //MessageBox.Show("Email address format is ok."); //In Windows Form
+ }
+ }
+
+
+mobile
+
+using System.Text.RegularExpressions;
+ 
+ private void is_valid_phone_no(string str_phone_no)
+ {
+ Regex matchRegex = new Regex(@"\d{3}-\d{3}-\d{4}$");
+ MatchCollection matches  = matchRegex.Matches(str_phone_no);
+ if(matches.Count==0)
+ {
+ Response.Write("Wrong phone number format."); // In Webserver
+ //MessageBox.Show("Wrong phone number format."); //In Windows Form
+ }
+ else
+ {
+ Response.Write("Phone number format is ok."); // In Webserver
+ //MessageBox.Show("Phone number format is ok."); //In Windows Form
+ }
+ }
+
+zip
+
+
+
+
+using System.Text.RegularExpressions;
+ 
+ private void is_valid_zip_code(string str_zip_code)
+ {
+ Regex matchRegex = new Regex(@"\d{5}-\d{4}$");
+ MatchCollection matches  = matchRegex.Matches(str_zip_code);
+ if(matches.Count==0)
+ {
+ Response.Write("Wrong Zip/Postal Code format."); // In Webserver
+ //MessageBox.Show("Wrong Zip/Postal Code format."); //In Windows Form
+ }
+ else
+ {
+ Response.Write("Zip/Postal Code format is ok."); // In Webserver
+ //MessageBox.Show("Zip/Postal Code format is ok."); //In Windows Form
+ }
+ }
+
+
+
+domain
+using System.Text.RegularExpressions;
+ private void is_valid_url(string str_url)
+ {
+Regex matchRegex = new Regex(@"(http|https)://([\w-]+\.)+[\w-]+(/[\w- ./?%&amp;=]*)?");
+ MatchCollection matches  = matchRegex.Matches(str_url);
+ if(matches.Count==0)
+ {
+ Response.Write("Wrong URL format."); // In Webserver
+ //MessageBox.Show("Wrong URL format."); //In Windows Form
+ }
+ else
+ {
+ Response.Write("URL format is ok."); // In Webserver
+ //MessageBox.Show("URL format is ok."); //In Windows Form
+ }
+ }
+
+
+combobox
+
+
+quote:Originally posted by velan
+ hi 
+
+u just do the following in the save button click event
+
+  if(combobox.text != "")
+ {
+   //code for saving informations
+}
+else
+{
+messagebox("Please select an item in combo");
+}
