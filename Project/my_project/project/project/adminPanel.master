@@ -1,0 +1,25 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Home.Master" AutoEventWireup="true" CodeBehind="adminPanel.master.cs"
+    Inherits="project.adminPanel" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div class="container">
+        <div class="leftBar">
+            <ul>
+                <li><a href="addContacts.aspx">Add Contacts</a></li>
+                <li><a href="adminnoticeBoard.aspx">Add Notice</a></li>
+                <li><a href="adminbookAudi.aspx">Book Auditorium</a></li>
+                <li><a href="makecommiteemember.aspx">Edit Commitee Members</a></li>
+                <li><a href="adminCharges.aspx">Edit Charges</a></li>
+                <li><a href="AdminMaintenance.aspx">Print Maintenance</a></li>
+                <li><a href="adminFeedbacks.aspx">Feedbacks</a></li>
+                <li><a href="adminBackup.aspx">Backup & Restore</a></li>
+            </ul>
+        </div>
+        <div class="rightContainer">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </div>
+</asp:Content>
